@@ -1,21 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, Archivo_Narrow } from "next/font/google";
+import { DM_Sans, Manrope } from "next/font/google";
 import { SITE, SITE_URL } from "@/lib/config";
 import "./globals.css";
 
-// El manual de la USTA usa Helvetica (comercial). Archivo es una alternativa libre muy cercana.
-const archivo = Archivo({
+// Fuentes tomadas de la propuesta de referencia: DM Sans (texto) y Manrope (titulares).
+const dmSans = DM_Sans({
   variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-// Titulares: equivalente libre de Helvetica Condensed.
-const archivoNarrow = Archivo_Narrow({
+const manrope = Manrope({
   variable: "--font-archivo-narrow",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -54,7 +53,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${archivo.variable} ${archivoNarrow.variable} antialiased`}>
+    <html lang="es" className={`${dmSans.variable} ${manrope.variable} antialiased`}>
       <body className="min-h-dvh bg-white text-negro">{children}</body>
     </html>
   );

@@ -40,7 +40,7 @@ Reemplaza `"#"` por la URL oficial cuando el cliente la entregue. Si es un enlac
 
 Paleta del Manual de Identidad Visual de la Universidad Santo Tomás: azul institucional `#1B4A96`, azul profundo `#123165`,
 naranja `#F68712`, amarillo `#FCCB06`, rojo `#ED1C2D`, cian `#00ADEF` y negro `#231F20`.
-El manual usa Helvetica (comercial); aquí se usan Archivo y Archivo Narrow (Google Fonts) como equivalentes libres.
+Fuentes: DM Sans (texto) y Manrope (titulares), de Google Fonts.
 
 ## Contenido
 

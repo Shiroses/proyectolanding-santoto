@@ -1,12 +1,14 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Container } from "./ui";
 
 const links = [
-  { href: "#programa", label: "El programa" },
-  { href: "#formacion", label: "Formación y postulación" },
-  { href: "#participar", label: "Cómo participar" },
-  { href: "#aliados", label: "Aliados" },
+  { href: "/#programa", label: "El programa" },
+  { href: "/#formacion", label: "Formación y postulación" },
+  { href: "/#participar", label: "Cómo participar" },
+  { href: "/#aliados", label: "Aliados" },
+  { href: "/marco-normativo", label: "Respaldo normativo" },
 ];
 
 export default function Header() {
@@ -19,7 +21,7 @@ export default function Header() {
         Saltar al contenido
       </a>
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
-        <a href="#inicio" className="flex min-w-0 items-center gap-2.5 sm:gap-[13px]" aria-label="Santander Territorio Bilingüe, ir al inicio">
+        <Link href="/#inicio" className="flex min-w-0 items-center gap-2.5 sm:gap-[13px]" aria-label="Santander Territorio Bilingüe, ir al inicio">
           <Image
             src="/images/logos/usta.svg"
             alt="Universidad Santo Tomás"
@@ -32,7 +34,7 @@ export default function Header() {
           <span className="text-[10px] leading-[1.35] font-extrabold tracking-[0.01em] text-[#334968] sm:text-xs">
             Santander<br />Territorio Bilingüe
           </span>
-        </a>
+        </Link>
 
         {/* Menú de escritorio */}
         <nav aria-label="Secciones" className="hidden lg:block">

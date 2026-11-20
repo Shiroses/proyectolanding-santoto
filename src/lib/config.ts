@@ -11,7 +11,7 @@
  * pégala aquí (https://...) y el botón abrirá el formulario en una pestaña nueva.
  * La URL está pendiente y no debe inventarse.
  */
-export const FORM_URL: string = "";
+export const FORM_URL: string = "https://forms.cloud.microsoft/r/u5iBQGxWx3";
 
 /**
  * URL pública del sitio (se usa para metadatos).

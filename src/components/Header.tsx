@@ -8,7 +8,6 @@ const links = [
   { href: "/#formacion", label: "Formación y postulación" },
   { href: "/#inscripcion", label: "Cómo participar" },
   { href: "/#aliados", label: "Aliados" },
-  { href: "/#marco-normativo", label: "Marco normativo" },
 ];
 
 export default function Header() {

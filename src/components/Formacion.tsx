@@ -43,14 +43,14 @@ export default function Formacion() {
           <path d="M200 40 A160 160 0 0 1 360 200" stroke="#FCCB06" strokeWidth="6" strokeLinecap="round" />
         </svg>
         <Container className="relative">
-          <div className="grid items-end gap-6 lg:grid-cols-2 lg:gap-16">
-            <div>
+          <div className="grid lg:grid-cols-[1fr_1.05fr] lg:grid-rows-[auto_auto] lg:gap-x-16">
+            <div className="mb-6 lg:col-start-1 lg:row-start-1 lg:mb-0 lg:self-end lg:pb-6">
               <Eyebrow dark>Características de la formación</Eyebrow>
               <h2 id="formacion-title" className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-bold">
                 Impulsa tus oportunidades con <span className="text-amarillo">English Horizons.</span>
               </h2>
             </div>
-            <div>
+            <div className="mb-10 lg:col-start-1 lg:row-start-2 lg:mb-0 lg:pt-2">
               <p className="text-lg leading-relaxed text-white/85 xl:text-xl">
                 Una ruta intensiva y práctica para dar tus primeros pasos en inglés, fortalecer tu confianza al
                 comunicarte y desarrollar una habilidad valiosa para tu futuro. Aprende desde tu territorio, con sesiones
@@ -61,13 +61,10 @@ export default function Formacion() {
                 cumplan los requisitos académicos y de asistencia establecidos.
               </p>
             </div>
-          </div>
-
-          {/* Ficha del programa */}
-          <div className="mt-10 grid overflow-hidden rounded-card bg-white text-navy shadow-[0_20px_50px_rgba(0,0,0,0.25)] md:mt-14 lg:grid-cols-[1fr_1.15fr]">
-            <div className="bg-amarillo p-6 sm:p-10">
+            {/* Ficha del programa: panel amarillo y panel blanco unidos */}
+            <div className="relative z-10 rounded-t-card bg-amarillo p-6 text-navy sm:p-10 lg:col-start-2 lg:row-start-1">
               <p className="font-display text-sm font-extrabold tracking-[0.08em] uppercase">Santander Territorio Bilingüe</p>
-              <ul className="mt-5 space-y-2.5">
+              <ul className="mt-5 grid gap-y-2.5 md:grid-cols-2 md:gap-x-8 lg:grid-cols-1">
                 {datos.map((d) => (
                   <li key={d} className="font-display flex items-start gap-3 text-xl leading-snug font-bold sm:text-2xl">
                     <Check aria-hidden="true" className="mt-1 size-5 shrink-0" strokeWidth={3} />
@@ -76,7 +73,7 @@ export default function Formacion() {
                 ))}
               </ul>
             </div>
-            <dl className="grid grid-cols-2 grid-rows-2 gap-px bg-navy/10">
+            <dl className="grid grid-cols-2 grid-rows-2 gap-px overflow-hidden rounded-b-card bg-[#e3e8f0] text-navy shadow-[0_24px_50px_rgba(0,0,0,0.28)] lg:col-start-2 lg:row-start-2">
               {detalles.map(({ valor, texto }) => (
                 <div key={valor} className="flex flex-col justify-center bg-white p-5 sm:p-8 lg:p-10">
                   <dt className="font-display text-xl font-extrabold text-azul sm:text-2xl xl:text-3xl">{valor}</dt>

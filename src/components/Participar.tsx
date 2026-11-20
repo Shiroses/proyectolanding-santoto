@@ -14,7 +14,7 @@ export default function Participar() {
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>Cómo participar</Eyebrow>
           <h2 id="participar-title" className="font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-navy sm:text-5xl">
-            ¿Cómo participar?
+            Tu siguiente oportunidad comienza con una decisión.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[#566479]">
             Conoce la ruta y verifica si cumples las condiciones para postularte.

@@ -42,14 +42,16 @@ const normas: Norma[] = [
 export default function MarcoNormativo() {
   return (
     <section id="marco-normativo" aria-labelledby="marco-title" className="bg-[#f9fafb]">
-      <div className="relative bg-navy pt-20 pb-24 text-white sm:pt-24">
+      <div className="relative bg-navy pt-14 pb-16 text-white md:pt-20 md:pb-20">
         <Container>
-          <div className="max-w-3xl">
-            <Eyebrow dark>Respaldo institucional</Eyebrow>
-            <h2 id="marco-title" className="font-display text-4xl leading-[1.08] font-extrabold tracking-tight sm:text-5xl">
-              Un programa que transforma oportunidades con respaldo normativo.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-white/80">
+          <div className="grid items-end gap-6 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <Eyebrow dark>Respaldo institucional</Eyebrow>
+              <h2 id="marco-title" className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-extrabold tracking-tight">
+                Un programa que transforma oportunidades con respaldo normativo.
+              </h2>
+            </div>
+            <p className="text-lg leading-relaxed text-white/80 xl:text-xl">
               Santander Territorio Bilingüe se desarrolla en el contexto de las disposiciones relacionadas con la
               atención a víctimas del conflicto, la reincorporación, la reintegración y la construcción de paz. Consulta
               las referencias normativas vinculadas a las poblaciones destinatarias del programa.
@@ -59,8 +61,8 @@ export default function MarcoNormativo() {
         <ColorBar className="absolute bottom-0 left-0" />
       </div>
 
-      <Container className="py-14 sm:py-16">
-        <ul className="space-y-4">
+      <Container className="py-12 md:py-16">
+        <ul className="space-y-3 sm:space-y-4">
           {normas.map(({ titulo, descripcion, href, esPdf }, i) => (
             <li key={titulo}>
               <details
@@ -75,8 +77,8 @@ export default function MarcoNormativo() {
                     className="size-6 shrink-0 text-azul transition-transform group-open:rotate-180"
                   />
                 </summary>
-                <div className="border-t border-[#eef2f6] px-5 pt-4 pb-6 sm:pr-16 sm:pl-[3.25rem]">
-                  <p className="text-base leading-relaxed text-[#566479] sm:text-lg">{descripcion}</p>
+                <div className="border-t border-[#eef2f6] px-5 pt-4 pb-6 sm:pr-16 sm:pl-[3.25rem] lg:pl-[3.5rem]">
+                  <p className="max-w-5xl text-base leading-relaxed text-[#566479] sm:text-lg">{descripcion}</p>
                   <a
                     href={href}
                     target="_blank"

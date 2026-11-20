@@ -61,7 +61,7 @@ export default function Formacion() {
   return (
     <section id="formacion" aria-labelledby="formacion-title">
       {/* Características de la formación */}
-      <div className="relative overflow-hidden bg-navy py-20 text-white sm:py-24">
+      <div className="relative overflow-hidden bg-navy py-14 text-white md:py-20">
         <svg
           viewBox="0 0 400 400"
           aria-hidden="true"
@@ -72,10 +72,10 @@ export default function Formacion() {
           <path d="M200 40 A160 160 0 0 1 360 200" stroke="#FCCB06" strokeWidth="6" strokeLinecap="round" />
         </svg>
         <Container className="relative">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
+          <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
             <div>
               <Eyebrow dark>Características de la formación</Eyebrow>
-              <h2 id="formacion-title" className="font-display text-4xl leading-[1.08] font-bold sm:text-5xl">
+              <h2 id="formacion-title" className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-bold">
                 Impulsa tus oportunidades con <span className="text-amarillo">English Horizons.</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-white/85">
@@ -93,14 +93,14 @@ export default function Formacion() {
               alt="Computador portátil con una clase virtual de inglés y el mapa de Santander conectado con el mundo"
               width={1448}
               height={1086}
-              sizes="(min-width: 1024px) 520px, 92vw"
-              className="h-auto w-full rounded-[1.75rem] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.35)] ring-1 ring-white/15"
+              sizes="(min-width: 1360px) 620px, (min-width: 1024px) 46vw, 92vw"
+              className="mx-auto aspect-[4/3] h-auto w-full max-w-2xl rounded-[1.75rem] object-cover lg:h-full lg:max-w-none shadow-[0_20px_50px_rgba(0,0,0,0.35)] ring-1 ring-white/15"
             />
           </div>
 
           {/* Ficha del programa */}
-          <div className="mt-14 grid overflow-hidden rounded-card bg-white text-navy shadow-[0_20px_50px_rgba(0,0,0,0.25)] md:grid-cols-[1fr_1.15fr]">
-            <div className="bg-amarillo p-8 sm:p-10">
+          <div className="mt-12 grid overflow-hidden rounded-card bg-white text-navy shadow-[0_20px_50px_rgba(0,0,0,0.25)] md:mt-14 lg:grid-cols-[1fr_1.15fr]">
+            <div className="bg-amarillo p-6 sm:p-10">
               <p className="font-display text-sm font-extrabold tracking-[0.08em] uppercase">Santander Territorio Bilingüe</p>
               <ul className="mt-5 space-y-2.5">
                 {datos.map((d) => (
@@ -113,8 +113,8 @@ export default function Formacion() {
             </div>
             <dl className="grid grid-cols-2 grid-rows-2 gap-px bg-navy/10">
               {detalles.map(({ valor, texto }) => (
-                <div key={valor} className="flex flex-col justify-center bg-white p-5 sm:p-8">
-                  <dt className="font-display text-xl font-extrabold text-azul sm:text-2xl">{valor}</dt>
+                <div key={valor} className="flex flex-col justify-center bg-white p-5 sm:p-8 lg:p-10">
+                  <dt className="font-display text-xl font-extrabold text-azul sm:text-2xl xl:text-3xl">{valor}</dt>
                   <dd className="mt-1 leading-snug text-negro/75">{texto}</dd>
                 </div>
               ))}
@@ -122,16 +122,16 @@ export default function Formacion() {
           </div>
 
           {/* ¿Qué empezarás a aprender? */}
-          <h3 className="font-display mt-20 text-3xl leading-tight font-bold sm:text-4xl">¿Qué empezarás a aprender?</h3>
-          <ul className="mt-8 grid gap-6 md:grid-cols-3">
+          <h3 className="font-display text-[clamp(1.6rem,1.3rem+1.2vw,2.4rem)] mt-14 leading-tight font-bold md:mt-16">¿Qué empezarás a aprender?</h3>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {aprendizajes.map(({ icon: Icon, titulo, texto, acento }) => (
-              <li key={titulo} className="relative overflow-hidden rounded-card bg-white/[0.07] p-8 ring-1 ring-white/15">
+              <li key={titulo} className="relative overflow-hidden rounded-card bg-white/[0.07] p-6 ring-1 ring-white/15 sm:last:col-span-2 lg:p-8 lg:last:col-span-1">
                 <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1.5 ${acento}`} />
                 <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-amarillo text-navy">
                   <Icon aria-hidden="true" className="size-6" strokeWidth={2} />
                 </span>
-                <h4 className="font-display mt-6 text-2xl leading-snug font-bold">{titulo}</h4>
-                <p className="mt-2 leading-relaxed text-white/80">{texto}</p>
+                <h4 className="font-display mt-5 text-xl leading-snug font-bold lg:mt-6 lg:text-2xl">{titulo}</h4>
+                <p className="mt-2 leading-relaxed text-white/80 lg:text-lg">{texto}</p>
               </li>
             ))}
           </ul>
@@ -139,39 +139,41 @@ export default function Formacion() {
       </div>
 
       {/* Continuación: población destinataria y condiciones */}
-      <div className="bg-niebla py-20 sm:py-24">
+      <div className="bg-niebla py-14 md:py-20">
         <Container>
-          <div className="max-w-3xl">
-            <Eyebrow>Formación y postulación</Eyebrow>
-            <h3 className="font-display text-4xl leading-[1.08] font-bold text-navy sm:text-5xl">
-              ¿Esta oportunidad también puede ser para ti?
-            </h3>
-            <p className="mt-6 text-lg leading-relaxed text-negro/80">
+          <div className="grid items-end gap-6 lg:grid-cols-[1fr_1fr] lg:gap-16">
+            <div>
+              <Eyebrow>Formación y postulación</Eyebrow>
+              <h3 className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-bold text-navy">
+                ¿Esta oportunidad también puede ser para ti?
+              </h3>
+            </div>
+            <p className="text-lg leading-relaxed text-negro/80 xl:text-xl">
               Si resides en Santander y haces parte de alguna de las poblaciones beneficiarias del Fondo de Pacificación,
               esta formación puede ser una oportunidad para fortalecer tu perfil y abrirte a nuevas experiencias. La
               convocatoria no establece restricción de edad.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
-            <div>
+          <div className="mt-10 grid gap-10 md:mt-12 lg:grid-cols-2 lg:gap-12">
+            <div className="flex flex-col">
               <h4 className="font-display text-2xl font-bold text-navy">Poblaciones a las que se dirige</h4>
-              <ul className="mt-6 grid gap-3" aria-label="Poblaciones a las que se dirige">
+              <ul className="mt-6 grid flex-1 auto-rows-fr gap-3" aria-label="Poblaciones a las que se dirige">
                 {poblaciones.map((p) => (
                   <li
                     key={p}
-                    className="flex items-start gap-4 rounded-2xl bg-white p-5 text-lg leading-snug font-medium text-navy ring-1 ring-navy/10"
+                    className="flex items-center gap-4 rounded-2xl bg-white p-5 text-lg leading-snug font-medium text-navy ring-1 ring-navy/10"
                   >
-                    <CheckCircle2 aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-azul" strokeWidth={2} />
+                    <CheckCircle2 aria-hidden="true" className="size-6 shrink-0 text-azul" strokeWidth={2} />
                     {p}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div>
+            <div className="flex flex-col">
               <h4 className="font-display text-2xl font-bold text-navy">Lo que debes tener presente antes de postularte</h4>
-              <ul className="mt-6 space-y-4 rounded-card bg-white p-6 ring-1 ring-navy/10 sm:p-8">
+              <ul className="mt-6 flex flex-1 flex-col justify-around gap-4 rounded-card bg-white p-6 ring-1 ring-navy/10 sm:p-8">
                 {requisitos.map((r) => (
                   <li key={r} className="flex items-start gap-3 text-lg leading-relaxed text-negro/80">
                     <span aria-hidden="true" className="mt-2.5 size-2 shrink-0 rounded-full bg-naranja" />
@@ -179,28 +181,29 @@ export default function Formacion() {
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-6 rounded-card border-l-4 border-naranja bg-white p-6 shadow-[0_4px_20px_rgba(18,49,101,0.06)] sm:p-8">
-                <p className="font-display flex items-center gap-2 text-sm font-extrabold tracking-[0.08em] text-naranja uppercase">
-                  <CalendarClock aria-hidden="true" className="size-5" />
-                  Programación de la convocatoria
-                </p>
-                <p className="mt-3 leading-relaxed text-negro/80">
-                  Las fechas de inicio, los horarios y el periodo de inscripción están pendientes de confirmación. La
-                  postulación estará sujeta a la verificación de requisitos y a la disponibilidad de cupos.
-                </p>
-              </div>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/#participar"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-navy px-8 py-4 text-base font-bold text-white shadow-[0_8px_24px_rgba(18,49,101,0.25)] transition-colors hover:bg-azul"
-            >
-              Quiero conocer cómo postularme
-              <ArrowDown aria-hidden="true" className="size-5 transition-transform group-hover:translate-y-0.5" />
-            </Link>
+          <div className="mt-10 grid items-center gap-6 lg:mt-8 lg:grid-cols-[1fr_auto] lg:gap-10">
+            <div className="rounded-card border-l-4 border-naranja bg-white p-6 shadow-[0_4px_20px_rgba(18,49,101,0.06)] sm:p-8">
+              <p className="font-display flex items-center gap-2 text-sm font-extrabold tracking-[0.08em] text-naranja uppercase">
+                <CalendarClock aria-hidden="true" className="size-5" />
+                Programación de la convocatoria
+              </p>
+              <p className="mt-3 leading-relaxed text-negro/80">
+                Las fechas de inicio, los horarios y el periodo de inscripción están pendientes de confirmación. La
+                postulación estará sujeta a la verificación de requisitos y a la disponibilidad de cupos.
+              </p>
+            </div>
+            <div className="text-center">
+              <Link
+                href="/#participar"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy px-5 py-4 sm:w-auto sm:px-8 text-center text-base font-bold text-white shadow-[0_8px_24px_rgba(18,49,101,0.25)] transition-colors hover:bg-azul"
+              >
+                Quiero conocer cómo postularme
+                <ArrowDown aria-hidden="true" className="size-5 transition-transform group-hover:translate-y-0.5" />
+              </Link>
+            </div>
           </div>
         </Container>
       </div>

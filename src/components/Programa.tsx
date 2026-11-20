@@ -40,7 +40,7 @@ export default function Programa() {
           <circle cx="100" cy="100" r="80" stroke="#1B4A96" strokeWidth="22" />
           <path d="M100 20 A80 80 0 0 1 180 100" stroke="#FCCB06" strokeWidth="4" strokeLinecap="round" />
         </svg>
-        <Container className="relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:py-24">
+        <Container className="relative grid items-center gap-10 py-12 sm:py-16 md:gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-20 xl:py-24">
           <div>
             <p className="font-display inline-flex items-center gap-2 rounded-full bg-amarillo px-4 py-1.5 text-sm font-bold tracking-[0.06em] text-navy uppercase">
               Santander Territorio Bilingüe
@@ -48,15 +48,15 @@ export default function Programa() {
 
             <h1
               id="programa-title"
-              className="font-display mt-7 text-[2.4rem] leading-[1.05] font-bold tracking-tight sm:text-5xl lg:text-[3.6rem]"
+              className="font-display text-[clamp(2.3rem,1.5rem+3.2vw,4.25rem)] mt-7 leading-[1.05] font-bold tracking-tight"
             >
               ¡Tu próxima gran oportunidad puede <span className="text-amarillo">hablar inglés!</span>
             </h1>
-            <p className="font-display mt-4 text-xl leading-snug font-bold text-white sm:text-2xl">
+            <p className="font-display mt-4 text-xl leading-snug font-bold text-white sm:text-2xl xl:text-[1.75rem]">
               ¡Prepárate para ella y haz que tu perfil destaque!
             </p>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 xl:text-xl">
               Haz que tu talento llegue más lejos. Aprende inglés, fortalece tu perfil profesional y desarrolla una de
               las habilidades más valoradas en el mundo laboral.
             </p>
@@ -70,15 +70,15 @@ export default function Programa() {
             </Link>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
             <div aria-hidden="true" className="absolute -right-3 -bottom-3 left-3 top-3 rounded-[1.75rem] bg-amarillo" />
             <Image
               src="/images/fotos/estudiantes-english-for-peace.webp"
               alt="Jóvenes conversando en una clase de inglés con un tablero que dice English for Peace"
               width={1400}
               height={933}
-              sizes="(min-width: 1024px) 520px, 92vw"
-              className="relative h-auto w-full rounded-[1.75rem] object-cover shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+              sizes="(min-width: 1360px) 640px, (min-width: 1024px) 46vw, 92vw"
+              className="relative aspect-[4/3] h-auto w-full rounded-[1.75rem] object-cover lg:aspect-[5/4] shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
               preload
             />
           </div>
@@ -86,16 +86,16 @@ export default function Programa() {
       </div>
 
       {/* Propuesta de valor */}
-      <div className="bg-white py-20 sm:py-24">
+      <div className="bg-white py-14 md:py-20">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+          <div className="grid items-center gap-6 md:gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             <div>
               <Eyebrow>El programa</Eyebrow>
-              <h2 className="font-display text-4xl leading-[1.08] font-bold text-navy sm:text-5xl">
+              <h2 className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-bold text-navy">
                 Tu territorio es el punto de partida, no el límite.
               </h2>
             </div>
-            <div className="space-y-5 text-lg leading-relaxed text-negro/80 lg:pt-10">
+            <div className="space-y-5 text-lg leading-relaxed text-negro/80 xl:text-xl">
               <p>
                 Con <strong className="text-navy">Santander Territorio Bilingüe</strong>, tienes la oportunidad de
                 formarte gratuitamente, ampliar tus horizontes y prepararte para acceder a nuevas oportunidades. Te
@@ -112,20 +112,20 @@ export default function Programa() {
             </div>
           </div>
 
-          <ul className="mt-14 grid gap-6 md:grid-cols-3">
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6 md:mt-14 lg:grid-cols-3">
             {beneficios.map(({ icon: Icon, titulo, texto, acento }) => (
-              <li key={titulo} className="relative overflow-hidden rounded-card border border-navy/10 bg-niebla p-8">
+              <li key={titulo} className="relative overflow-hidden flex flex-col rounded-card border border-navy/10 bg-niebla p-6 sm:last:col-span-2 lg:p-8 lg:last:col-span-1">
                 <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1.5 ${acento}`} />
                 <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-azul text-white">
                   <Icon aria-hidden="true" className="size-6" strokeWidth={1.75} />
                 </span>
-                <h3 className="font-display mt-6 text-2xl leading-snug font-bold text-navy">{titulo}</h3>
-                <p className="mt-2 leading-relaxed text-negro/75">{texto}</p>
+                <h3 className="font-display mt-5 text-xl leading-snug lg:mt-6 lg:text-2xl font-bold text-navy">{titulo}</h3>
+                <p className="mt-2 leading-relaxed text-negro/75 lg:text-lg">{texto}</p>
               </li>
             ))}
           </ul>
 
-          <p className="font-display mx-auto mt-14 max-w-3xl border-l-4 border-amarillo pl-6 text-2xl leading-snug font-bold text-navy sm:text-[1.75rem]">
+          <p className="font-display mt-10 rounded-card border-l-4 border-amarillo bg-niebla px-6 py-6 text-[clamp(1.35rem,1.1rem+1vw,2rem)] leading-snug font-bold text-navy sm:px-10 sm:py-8 md:mt-14">
             Porque las oportunidades no tienen fronteras cuando tienes las herramientas para alcanzarlas.
           </p>
         </Container>

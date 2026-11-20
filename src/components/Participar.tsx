@@ -30,7 +30,7 @@ function BotonInscripcion() {
 
   if (!habilitado) {
     return (
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 lg:items-start">
         <span
           role="link"
           aria-disabled="true"
@@ -74,40 +74,43 @@ function BotonInscripcion() {
 /** Sección 03 · Cómo participar: ruta de inscripción en tres pasos y un único llamado a la acción. */
 export default function Participar() {
   return (
-    <section id="participar" aria-labelledby="participar-title" className="bg-[#f9fafb] py-20 sm:py-28">
-      <Container>
-        <div className="mx-auto max-w-3xl text-center">
+    <section id="participar" aria-labelledby="participar-title" className="bg-[#f9fafb] py-14 md:py-20">
+      <Container className="grid items-center gap-10 md:gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-x-16 lg:gap-y-9">
+        <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:self-end lg:text-left">
           <Eyebrow>Da el primer paso</Eyebrow>
           <h2
             id="participar-title"
-            className="font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-navy sm:text-5xl"
+            className="font-display text-[clamp(2rem,1.45rem+2.2vw,3.4rem)] leading-[1.05] font-extrabold tracking-tight text-navy"
           >
             Tu oportunidad de aprender inglés empieza aquí.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[#566479]">
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[#566479] lg:mx-0 xl:text-xl">
             Revisa las condiciones del programa y prepárate para postularte. El proceso es sencillo y se realizará a
             través de los canales oficiales de la convocatoria.
           </p>
         </div>
 
-        <ol className="relative mt-14 grid gap-12 md:grid-cols-3 md:gap-[34px]">
+        <ol className="relative mx-auto grid w-full max-w-3xl gap-4 md:gap-5 lg:col-start-2 lg:max-w-none lg:row-span-2 lg:row-start-1 lg:grid-cols-1">
           <span
             aria-hidden="true"
-            className="absolute top-[29px] right-[14%] left-[14%] hidden h-px bg-[repeating-linear-gradient(to_right,#afc0d2_0_8px,transparent_8px_16px)] md:block"
+            className="absolute top-[58px] bottom-[58px] left-[54px] hidden w-px bg-[repeating-linear-gradient(to_bottom,#afc0d2_0_8px,transparent_8px_16px)] md:block"
           />
           {pasos.map(({ titulo, texto }, i) => (
-            <li key={titulo} className="relative z-10 text-center">
-              <span className="font-display mx-auto mb-5 grid size-[60px] place-items-center rounded-full border-[7px] border-[#f9fafb] bg-navy text-lg font-extrabold text-white shadow-[0_0_0_1px_#dde5ee]">
+            <li
+              key={titulo}
+              className="relative z-10 rounded-card bg-white p-6 text-center shadow-[0_8px_24px_rgba(21,39,71,0.06)] ring-1 ring-[#dde5ee] md:grid md:grid-cols-[60px_1fr] md:items-center md:gap-x-6 md:px-6 md:py-7 md:text-left"
+            >
+              <span className="font-display mx-auto mb-5 grid size-[60px] place-items-center rounded-full border-[7px] border-white md:row-span-2 md:mx-0 md:mb-0 bg-navy text-lg font-extrabold text-white shadow-[0_0_0_1px_#dde5ee]">
                 <span className="sr-only">Paso </span>
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display mb-2.5 text-[19px] font-bold text-navy">{titulo}</h3>
-              <p className="mx-auto max-w-[320px] text-base leading-relaxed text-[#566479]">{texto}</p>
+              <h3 className="font-display mb-2.5 text-[19px] font-bold text-navy md:mb-1.5 lg:text-[22px]">{titulo}</h3>
+              <p className="mx-auto max-w-[420px] text-base leading-relaxed text-[#566479] md:mx-0 md:max-w-none lg:text-lg">{texto}</p>
             </li>
           ))}
         </ol>
 
-        <div className="mt-14 text-center">
+        <div className="text-center lg:col-start-1 lg:row-start-2 lg:self-start lg:text-left">
           <BotonInscripcion />
         </div>
       </Container>

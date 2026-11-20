@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react";
+import { FORM_URL } from "@/lib/config";
 import { Container, Eyebrow } from "./ui";
 
 const pasos = [
@@ -6,7 +8,7 @@ const pasos = [
   { titulo: "Mantente atento", texto: "Permanece atento a las comunicaciones oficiales sobre las siguientes etapas del proceso." },
 ];
 
-/** Bloque 5: Cómo participar. Tres pasos con línea de recorrido, sin repetir el botón de inscripción. */
+/** Bloque 5: Cómo participar. Tres pasos con línea de recorrido, con botón al formulario de inscripción. */
 export default function Participar() {
   return (
     <section id="participar" aria-labelledby="participar-title" className="bg-[#f9fafb] py-20 sm:py-28">
@@ -37,6 +39,20 @@ export default function Participar() {
             </li>
           ))}
         </ol>
+
+        <div className="mt-12 text-center">
+          <a
+            href={FORM_URL}
+            {...(FORM_URL.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-naranja px-8 py-4 text-base font-bold text-white shadow-[0_8px_24px_rgba(246,135,18,0.35)] transition-colors hover:bg-[#ff9a2e]"
+          >
+            Inscríbete · Presencial o híbrida
+            <ArrowUpRight
+              aria-hidden="true"
+              className="size-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </a>
+        </div>
       </Container>
     </section>
   );

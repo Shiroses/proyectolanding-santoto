@@ -5,7 +5,7 @@
 
 /**
  * Enlace del formulario único de inscripción (modalidad presencial o híbrida).
- * Lo usa el único botón de la página, en la portada.
+ * Lo usan los botones de la portada y de "Cómo participar".
  *
  * TODO: reemplazar "#" por la URL oficial del formulario cuando la entregue el cliente.
  * La URL está pendiente y no debe inventarse.

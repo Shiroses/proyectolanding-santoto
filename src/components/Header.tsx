@@ -8,7 +8,7 @@ const links = [
   { href: "/#formacion", label: "Formación y postulación" },
   { href: "/#participar", label: "Cómo participar" },
   { href: "/#aliados", label: "Aliados" },
-  { href: "/marco-normativo", label: "Respaldo normativo" },
+  { href: "/#marco-normativo", label: "Marco normativo" },
 ];
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
         Saltar al contenido
       </a>
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
-        <Link href="/#inicio" className="flex min-w-0 items-center gap-2.5 sm:gap-[13px]" aria-label="Santander Territorio Bilingüe, ir al inicio">
+        <Link href="/#programa" className="flex min-w-0 items-center gap-2.5 sm:gap-[13px]" aria-label="Santander Territorio Bilingüe, ir al inicio">
           <Image
             src="/images/logos/usta.svg"
             alt="Universidad Santo Tomás"
@@ -41,9 +41,9 @@ export default function Header() {
           <ul className="flex items-center gap-6 text-sm font-medium text-[#334968] xl:gap-8">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="transition-colors hover:text-azul">
+                <Link href={l.href} className="transition-colors hover:text-azul">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -62,9 +62,9 @@ export default function Header() {
             <ul className="flex flex-col text-base text-white">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="block rounded-xl px-4 py-3 hover:bg-white/10">
+                  <Link href={l.href} className="block rounded-xl px-4 py-3 hover:bg-white/10">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

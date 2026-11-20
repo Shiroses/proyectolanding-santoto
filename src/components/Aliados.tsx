@@ -39,16 +39,9 @@ export default function Aliados() {
         </div>
 
         <div className="mt-10 rounded-card bg-niebla p-5 sm:p-8 md:mt-12 lg:p-10">
-          <div className="grid gap-3 lg:grid-cols-[auto_1fr] lg:items-center lg:gap-10">
-            <h3 className="font-display text-2xl font-bold text-navy lg:text-3xl">Instituciones participantes</h3>
-            <p className="leading-relaxed text-negro/75 lg:text-lg">
-            La Gobernación de Santander, a través de la Secretaría de Competitividad y Productividad, participa junto con
-            FondoPAZ y la Universidad Santo Tomás, Seccional Bucaramanga, en una iniciativa para fortalecer las
-            capacidades comunicativas en inglés de las poblaciones convocadas.
-            </p>
-          </div>
+          <h3 className="font-display text-center text-2xl font-bold text-navy lg:text-3xl">Instituciones participantes</h3>
 
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+          <ul className="mt-6 grid grid-cols-2 sm:mt-8 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
             {aliados.map((a) => (
               <li
                 key={a.nombre}

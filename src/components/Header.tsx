@@ -6,7 +6,7 @@ import { Container } from "./ui";
 const links = [
   { href: "/#programa", label: "El programa" },
   { href: "/#formacion", label: "Formación y postulación" },
-  { href: "/#participar", label: "Cómo participar" },
+  { href: "/#inscripcion", label: "Cómo participar" },
   { href: "/#aliados", label: "Aliados" },
   { href: "/#marco-normativo", label: "Marco normativo" },
 ];

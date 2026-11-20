@@ -112,18 +112,34 @@ export default function Programa() {
             </div>
           </div>
 
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-6 md:mt-14 lg:grid-cols-3">
-            {beneficios.map(({ icon: Icon, titulo, texto, acento }) => (
-              <li key={titulo} className="relative overflow-hidden flex flex-col rounded-card border border-navy/10 bg-niebla p-6 sm:last:col-span-2 lg:p-8 lg:last:col-span-1">
-                <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1.5 ${acento}`} />
-                <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-azul text-white">
-                  <Icon aria-hidden="true" className="size-6" strokeWidth={1.75} />
-                </span>
-                <h3 className="font-display mt-5 text-xl leading-snug lg:mt-6 lg:text-2xl font-bold text-navy">{titulo}</h3>
-                <p className="mt-2 leading-relaxed text-negro/75 lg:text-lg">{texto}</p>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10 grid items-center gap-6 md:mt-14 lg:grid-cols-[1.35fr_1fr] lg:gap-8">
+            <Image
+              src="/images/fotos/formacion-virtual-ingles-santander.webp"
+              alt="Mujer en un computador portátil tomando una clase virtual de inglés, con el mapa de Santander y una paloma de la paz"
+              width={1670}
+              height={942}
+              sizes="(min-width: 1360px) 730px, (min-width: 1024px) 55vw, 92vw"
+              className="aspect-[1670/942] h-auto w-full rounded-[1.75rem] object-cover shadow-[0_20px_50px_rgba(18,49,101,0.18)]"
+            />
+
+            <ul className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:h-full lg:grid-cols-1 lg:gap-4">
+              {beneficios.map(({ icon: Icon, titulo, texto, acento }) => (
+                <li
+                  key={titulo}
+                  className="relative flex flex-col overflow-hidden rounded-card border border-navy/10 bg-niebla p-6 sm:last:col-span-2 lg:flex-row lg:items-center lg:gap-5 lg:last:col-span-1 xl:px-7"
+                >
+                  <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1.5 lg:inset-x-auto lg:inset-y-0 lg:left-0 lg:h-auto lg:w-1.5 ${acento}`} />
+                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-azul text-white">
+                    <Icon aria-hidden="true" className="size-6" strokeWidth={1.75} />
+                  </span>
+                  <div>
+                    <h3 className="font-display mt-5 text-xl leading-snug font-bold text-navy lg:mt-0 xl:text-2xl">{titulo}</h3>
+                    <p className="mt-1.5 leading-relaxed text-negro/75 lg:text-[17px]">{texto}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <p className="font-display mt-10 rounded-card border-l-4 border-amarillo bg-niebla px-6 py-6 text-[clamp(1.35rem,1.1rem+1vw,2rem)] leading-snug font-bold text-navy sm:px-10 sm:py-8 md:mt-14">
             Porque las oportunidades no tienen fronteras cuando tienes las herramientas para alcanzarlas.

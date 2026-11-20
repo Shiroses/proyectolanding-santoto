@@ -4,12 +4,8 @@
  */
 
 /**
- * Enlace del formulario oficial de inscripción (botón "Consultar información de inscripción").
- *
- * Mientras esté vacío (""), el botón se muestra deshabilitado y la página informa que la
- * convocatoria está pendiente de publicación. Cuando el cliente entregue la URL oficial,
- * pégala aquí (https://...) y el botón abrirá el formulario en una pestaña nueva.
- * La URL está pendiente y no debe inventarse.
+ * Enlace del formulario oficial de inscripción.
+ * Lo usan todos los botones "Inscríbete aquí" de la landing (se abre en una pestaña nueva).
  */
 export const FORM_URL: string = "https://forms.cloud.microsoft/r/u5iBQGxWx3";
 

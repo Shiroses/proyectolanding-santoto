@@ -7,7 +7,7 @@
  * Enlace del formulario oficial de inscripción.
  * Lo usan todos los botones "Inscríbete aquí" de la landing (se abre en una pestaña nueva).
  */
-export const FORM_URL: string = "https://forms.cloud.microsoft/r/u5iBQGxWx3";
+export const FORM_URL: string = "https://forms.cloud.microsoft/r/HNSxqNuyy3";
 
 /**
  * URL pública del sitio (se usa para metadatos).
